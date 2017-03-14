@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Error_Conexion">Ocurrió un error al intentar hacer la conexión con los servicios,por favor intente más tarde.</string>
+</resources>

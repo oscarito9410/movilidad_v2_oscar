@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    tools:context=".Activities.Contactos">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/hader"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:background="#FFD700">
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/regresar2"
+                android:layout_width="70dp"
+                android:layout_height="80dp">
+                <ImageButton
+                    android:id="@+id/boton_regresar"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/flecha_cabeza"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+
+                android:id="@+id/titulo_pendiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contactos de emergencia"
+                android:textColor="#373333"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginTop="15dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/conten"
+            android:layout_above="@+id/footer"
+            android:layout_below="@+id/hader"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿A que contactos se enviará notificación \n en caso de emergencia.?"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginRight="9dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contacto 1: "
+                            android:textColor="#373333"
+                            android:textSize="16dp"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="5dp" />
+
+                        <EditText
+                            android:hint="nombre"
+                            android:id="@+id/nombre1Contacto"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:background="#FFFFFF"
+                            android:paddingLeft="10dp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/catalogo_paises"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_pais" />
+
+                        <TextView
+                            android:textColor="#373333"
+                            android:text="Pais"
+                            android:id="@+id/lada1"
+                            android:layout_width="40dp"
+                            android:textSize="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp">
+                        </TextView>
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/flecha"
+                            android:background="@drawable/flecha_proponer"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp" />
+
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/importarContactos"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_contacto" />
+
+
+
+
+                        <EditText
+                            android:hint="Número telefonico"
+                            android:id="@+id/tel1"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:inputType="phone"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:maxLength="10"
+                            android:background="#FFFFFF"
+                            android:paddingLeft="10dp"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:background="#9B9797"
+                        android:layout_width="290dp"
+                        android:layout_height="1dp">
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="9dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contacto 2:"
+                            android:textColor="#373333"
+                            android:textSize="16dp"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal" />
+                        <EditText
+                            android:hint="nombre"
+                            android:id="@+id/nombre2Contacto"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:background="#FFFFFF"
+                            android:paddingLeft="10dp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:alpha="30"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/catalogo_paises1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_pais" />
+
+
+                        <TextView
+                            android:textColor="#373333"
+                            android:text="Pais"
+                            android:id="@+id/lada2"
+                            android:layout_width="40dp"
+                            android:textSize="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp">
+                        </TextView>
+
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/flecha1"
+                            android:background="@drawable/flecha_proponer"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp" />
+
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/importarContactos1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_contacto" />
+
+
+
+
+
+                        <EditText
+                            android:hint="Número telefonico"
+                            android:id="@+id/tel2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:background="#FFFFFF"
+                            android:paddingLeft="10dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:background="#9B9797"
+                        android:layout_width="290dp"
+                        android:layout_height="1dp">
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="9dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contacto 3:"
+                            android:textColor="#373333"
+                            android:textSize="16dp"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal" />
+
+
+                        <EditText
+                            android:hint="nombre"
+                            android:id="@+id/nombre3Contacto"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:background="#FFFFFF"
+                            android:paddingLeft="10dp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/horario_progressbar"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/main_progressbar_imageview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/loading_animation"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/catalogo_paises2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_pais" />
+
+
+                        <TextView
+                            android:id="@+id/lada3"
+                            android:textColor="#373333"
+                            android:hint="Pais"
+                            android:layout_width="40dp"
+                            android:textSize="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp">
+                        </TextView>
+
+
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/flecha2"
+                            android:background="@drawable/flecha_proponer"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp" />
+
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/importarContactos2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_contacto" />
+
+
+
+
+
+
+                        <EditText
+                            android:hint="Número telefonico"
+                            android:id="@+id/tel3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:background="#FFFFFF"
+                            android:paddingLeft="10dp" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="9dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contacto 4: "
+                            android:textColor="#373333"
+                            android:textSize="16dp"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="5dp" />
+
+                        <EditText
+                            android:hint="nombre"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:background="#FFFFFF"
+                            android:paddingLeft="10dp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_pais" />
+
+                        <TextView
+                            android:textColor="#373333"
+                            android:text="Pais"
+                            android:layout_width="40dp"
+                            android:textSize="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp">
+                        </TextView>
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:background="@drawable/flecha_proponer"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp" />
+
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_contacto" />
+
+
+
+
+                        <EditText
+                            android:hint="Número telefonico"
+                             android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:background="#FFFFFF"
+                            android:paddingLeft="10dp"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:background="#9B9797"
+                        android:layout_width="290dp"
+                        android:layout_height="1dp">
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                 android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/guardar"
+                android:text="Guardar"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:textColor="#373333"
+                android:background="#EFC822"
+
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+
+                android:layout_below="@+id/guardar"
+                android:id="@+id/cuentanos"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:background="#3F3E3E"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_height="50dp">
+
+                <ImageView
+
+                    android:id="@+id/paginaweb5"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/cuentanos"
+                    android:layout_marginLeft="160dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:id="@+id/panico"
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_height="60dp">
+
+                    <ImageView
+                        android:background="@drawable/panico_icono"
+                        android:layout_width="25dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_height="25dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

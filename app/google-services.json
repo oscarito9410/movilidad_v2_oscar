@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "45539762683",
+    "firebase_url": "https://sociomasandroid.firebaseio.com",
+    "project_id": "sociomasandroid",
+    "storage_bucket": "sociomasandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45539762683:android:7c4115c5befc3a94",
+        "android_client_info": {
+          "package_name": "com.gruposalinas.elektra.movilidadgs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45539762683-lpok7fqakg53q0fo5qvb7jmqalpcm6gb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gruposalinas.elektra.movilidadgs",
+            "certificate_hash": "70837A3A367A1C6E2019E718A0BFF492BC60630F"
+          }
+        },
+        {
+          "client_id": "45539762683-45lpssb9qmh5ge74kppe89rmtrc5f3n2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzvMRwPrUVIdW8q5fx1NYRJCKiWEX5o2c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45539762683-45lpssb9qmh5ge74kppe89rmtrc5f3n2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

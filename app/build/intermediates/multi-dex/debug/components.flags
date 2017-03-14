@@ -1,0 +1,293 @@
+-injars 'C:\Users\oemy9\AndroidStudioProjects\movilidad-v2\app\build\intermediates\transforms\jarMerging\debug\jars\1\1f\combined.jar'
+-outjars 'C:\Users\oemy9\AndroidStudioProjects\movilidad-v2\app\build\intermediates\multi-dex\debug\componentClasses.jar'
+
+-libraryjars 'C:\Users\oemy9\AppData\Local\Android\Sdk\build-tools\23.0.2\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontusemixedcaseclassnames
+-dontpreverify
+-dontnote **
+-dontwarn **
+-printconfiguration 'C:\Users\oemy9\AndroidStudioProjects\movilidad-v2\app\build\intermediates\multi-dex\debug\components.flags'
+
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.LoginActivity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.RegistroActivity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.MainActivity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.MovementListActivity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.geolocation.EmployeeLocationService {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.receivers.arrancarservicio {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Horarios_consulta {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Detalle_Horario_pendiente {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Activity_Tiendas {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.TiendaDetalle {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Mostrar_mapas {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.ListadoTiendas {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.MostrarMapaEnviar {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.ListaZonasActivity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.DetalleZonaActivity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.MenuAplicaciones {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.DetalleZonaEliminar {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.MapasZonasUbicaciones {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.ListaIncidenciasActivity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.justificacionCatalogo {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.VerDetalleJustificacionActivity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.geolocation.ServicePanico {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.receivers.Cambios_Configuracion {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.geolocation.serviceEvento {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Panico {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Activity_horarios_Autorizar {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.receivers.notificacion_app {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.receivers.incidenciasreciver {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Nombres_lista {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Contacto {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.capture_video {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.geolocation.HoraExacta {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.receivers.horarecibe {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.receivers.recibeSalida {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Contactos {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Permisos_Activity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Permisos_Plantilla_Activity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Agregar_Permisos_activity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Agregar_permisos_plantilla {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Plantilla_ZonasYubicaciones {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Plantilla_ZonasYubicaciones_pendientes {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.AsignarZona_Plantilla {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.listado_ubicaciones_plantilla {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.SplashScreenActivity {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.pushNotificacionFireBase.MyFirebaseMessagingService {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.pushNotificacionFireBase.TokenID {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.geolocation.GPS_Service {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.geolocation.RecorderService {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.geolocation.Service_contact {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.Settings_perfil {
+    <init>();
+}
+
+-keep class com.gruposalinas.elektra.movilidadgs.Activities.ConfiguracionApp {
+    <init>();
+}
+
+-keep class com.example.adrian.vistaweb.vistawebview {
+    <init>();
+}
+
+-keep class com.example.adrian.vistaweb.vista_web_descarga {
+    <init>();
+}
+
+-keep class com.example.adrian.vistaweb.paginaWeb {
+    <init>();
+}
+
+-keep class com.example.adrian.vistaweb.vista_fecha {
+    <init>();
+}
+
+-keep class com.google.firebase.messaging.FirebaseMessagingService {
+    <init>();
+}
+
+-keep class com.google.android.gms.common.api.GoogleApiActivity {
+    <init>();
+}
+
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver {
+    <init>();
+}
+
+-keep class com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver {
+    <init>();
+}
+
+-keep class com.google.android.gms.measurement.AppMeasurementService {
+    <init>();
+}
+
+-keep class com.google.firebase.iid.FirebaseInstanceIdReceiver {
+    <init>();
+}
+
+-keep class com.google.firebase.iid.FirebaseInstanceIdInternalReceiver {
+    <init>();
+}
+
+-keep class com.google.firebase.iid.FirebaseInstanceIdService {
+    <init>();
+}
+
+-keep class com.google.firebase.provider.FirebaseInitProvider {
+    <init>();
+}
+
+-keep public class * extends android.app.Instrumentation {
+    <init>();
+}
+
+-keep public class * extends android.app.Application {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.tools.fd.** {
+    <fields>;
+    <methods>;
+}
