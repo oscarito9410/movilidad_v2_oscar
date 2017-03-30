@@ -53,13 +53,12 @@ public class ObtenerEstatusAlertaWS
             e.printStackTrace();
         }
 
-        HttpsURLConnection urlConnection=null;
+        HttpURLConnection urlConnection=null;
         try{
 
             java.net.URL url = new URL(URL);
-            urlConnection = (HttpsURLConnection) url.openConnection();
+            urlConnection = Utils.checkIfHttps(url);
             urlConnection.setDoOutput(true);
-            urlConnection.setHostnameVerifier(Utils.hostnameVerifier());// valida el hostname
             urlConnection.setRequestMethod("POST");
             urlConnection.setUseCaches(false);
             urlConnection.setConnectTimeout(60000);

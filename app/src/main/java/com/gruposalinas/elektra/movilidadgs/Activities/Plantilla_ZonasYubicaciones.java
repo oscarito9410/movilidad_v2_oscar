@@ -41,7 +41,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Plantilla_ZonasYubicaciones extends Activity {
+public class Plantilla_ZonasYubicaciones extends BaseActivity {
 
     LinearLayout textoBotonpendiente,Panico1;
     GridView listasTienda,listaubicaciones;

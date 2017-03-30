@@ -53,6 +53,7 @@ public class HorarioPendienteWS
         JSONObject jsonObject1= new JSONObject();
         JSONArray jsonArray= new JSONArray();
         try {
+            //TODO MODIFICAR ESTA PARTE DEL ENVÍO DE HORARIOS
             jsonObject.put("bit_valido",horapendiente.isBit_valido());
             jsonObject.put("id_num_empleado", securityItems.getIdEmployEncrypt());
             jsonObject.put("ti_dia_semana",horapendiente.getTi_dia_semana());
@@ -117,7 +118,7 @@ public class HorarioPendienteWS
 
                 }
                 else{
-
+                    Utils.checkIfFecha(obj.getString(Constants.SERVER_UTC_TIME));
                     horapendiente.setSuccess(false);
                 }
             }

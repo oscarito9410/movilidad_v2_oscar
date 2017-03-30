@@ -35,7 +35,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ListadoTiendas extends Activity {
+public class ListadoTiendas extends BaseActivity {
 
     GridView listaTiendas;
     ArrayAdapter arrayAdapter=null;

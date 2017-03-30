@@ -47,7 +47,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.StringTokenizer;
 
-public class Permisos_Plantilla_Activity extends Activity {
+public class Permisos_Plantilla_Activity extends BaseActivity {
 
     LinearLayout regresar;
     ImageView agregar;

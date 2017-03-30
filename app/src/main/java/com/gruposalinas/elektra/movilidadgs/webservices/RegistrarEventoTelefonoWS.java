@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -54,13 +55,12 @@ public class RegistrarEventoTelefonoWS
         Log.d(TAG, "inicia WS RegistrarEventoTelefono " + jsonObject.toString());
 
 
-        HttpsURLConnection urlConnection=null;
+        HttpURLConnection urlConnection=null;
         try{
 
             java.net.URL url = new URL(URL);
-            urlConnection = (HttpsURLConnection) url.openConnection();
+            urlConnection = Utils.checkIfHttps(url);
             urlConnection.setDoOutput(true);
-            urlConnection.setHostnameVerifier(Utils.hostnameVerifier());// valida el hostname
             urlConnection.setRequestMethod("POST");
             urlConnection.setUseCaches(false);
             urlConnection.setConnectTimeout(60000);

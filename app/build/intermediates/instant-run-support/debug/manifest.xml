@@ -61,6 +61,7 @@
 
     <uses-permission android:name="com.gruposalinas.elektra.movilidadgs.permission.C2D_MESSAGE" /> <!-- =======APLICACIÓN======= -->
     <application
+        name="com.gruposalinas.elektra.movilidadgs.utils.ApplicationBase"
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:allowBackup="true"
         android:icon="@drawable/app_socio_mas_x2"
@@ -174,10 +175,10 @@
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
                 <action android:name="android.intent.action.BATTERY_LOW" />
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
                 <action android:name="android.intent.action.TIME_TICK" />
                 <action android:name="android.intent.action.DATE_CHANGED" />
                 <action android:name="android.intent.action.BATTERY_OKAY" />
-                <action android:name="android.intent.action.TIME_SET" />
             </intent-filter>
         </receiver>
 
@@ -260,6 +261,7 @@
 
         <service android:name="com.gruposalinas.elektra.movilidadgs.pushNotificacionFireBase.MyFirebaseMessagingService" >
             <intent-filter>
+                -
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
@@ -282,6 +284,12 @@
         <activity
             android:name="com.gruposalinas.elektra.movilidadgs.Activities.ConfiguracionApp"
             android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.gruposalinas.elektra.movilidadgs.receivers.TestReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity android:name="com.example.adrian.vistaweb.vistawebview" />
         <activity android:name="com.example.adrian.vistaweb.vista_web_descarga" />
         <activity android:name="com.example.adrian.vistaweb.paginaWeb" />

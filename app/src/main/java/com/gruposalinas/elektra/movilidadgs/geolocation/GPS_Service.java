@@ -64,7 +64,7 @@ String TAG="probar";
                 Intent i = new Intent(getApplicationContext(),GPS_Service.class);
                 stopService(i);
                 segundero.cancel();
-              //  Toast.makeText(getApplicationContext(),location.getLatitude()+"   "+location.getLongitude(),Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),location.getLatitude()+"   "+location.getLongitude(),Toast.LENGTH_LONG).show();
 
             }
 
@@ -282,8 +282,6 @@ String TAG="probar";
     public void muestraPosicionActual_(GPSTracker _location){
         Log.i(TAG, "17- muestraPosicionActual");
 
-
-
         Log.i(TAG, "18- Latitude = " + _location.getLatitud() + "\nLongitud = " + _location.getLongitud());
         date = new Date();
         @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormatter = new SimpleDateFormat(Constants.DAY_FORMAT);
@@ -305,18 +303,13 @@ String TAG="probar";
                 Utils.getJsonDate(date),
                 Utils.generateMovementId(dateString, hourString),_location.getProvider(),_location.getAccuracy());
         registroGps.setJsonDate(generateJsonDate(registroGps));
-
         //Invocar Webservice para almacenar la posicion
         //RegisterMovementAsync registerMovementAsync = new RegisterMovementAsync(this);
         //registerMovementAsync.execute(registroGps);
         ///
         //ultimo_registro(registroGps);
-
         //
-
         onPositionSaved(registroGps);
-
-
     }
 }
 

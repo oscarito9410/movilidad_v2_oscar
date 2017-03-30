@@ -257,7 +257,7 @@
     <string name="erroralertajustificacion">Error al enviar la justificación</string>
     <string name="servicioArrancar">Presione para iniciar aplicación</string>
     <string name="titleservice">Iniciar Servicio</string>
-    <string name="version_name">2.2.9</string>
+    <string name="version_name">2.3.0</string>
     <string name="versionnombre">Existe una nueva versión</string>
     <string name="versionaccion">Existe una nueva versión de SOCIO MAS la fecha limite:  </string>
     <string name="validacionjustif">El Justificante se ha enviado correctamente.</string>
@@ -273,6 +273,8 @@
     <string name="title_activity_panico">Panico</string>
     <string name="title_activity_menu_horario_zonas_pendientes">Menu_horario_zonas_pendientes
     </string>
+    <string name="ingresar_motivo">Es necesario ingresar el motivo</string>
+    <string name="revisa_fecha">Asegurate que la opción de fecha y hora automáticas se encuentre activada en el dispositivo</string>
     <string name="msjError">Error de conexión intentar más tarde.</string>
     <string name="title_activity_contacto">Contacto</string>
     <string name="llavaSimetrica">JtwJpIFKdRoJ7HIEY68/I3jl0kznV5o=</string>

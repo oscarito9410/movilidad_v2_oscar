@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -29,7 +28,7 @@ import com.gruposalinas.elektra.movilidadgs.beans.DatosContacto;
 import com.gruposalinas.elektra.movilidadgs.beans.Incidencias;
 import com.gruposalinas.elektra.movilidadgs.beans.paginaweb;
 import com.gruposalinas.elektra.movilidadgs.utils.Constants;
-import com.gruposalinas.elektra.movilidadgs.utils.SecurityUtils;
+import com.gruposalinas.elektra.movilidadgs.utils.DecryptUtils;
 import com.gruposalinas.elektra.movilidadgs.utils.bloquear_pantalla;
 
 import org.json.JSONArray;
@@ -42,7 +41,7 @@ import java.util.Date;
 import java.util.StringTokenizer;
 
 
-public class ListaIncidenciasActivity extends Activity {
+public class ListaIncidenciasActivity extends BaseActivity {
     GridView listaIncidencias,plantillas;
     JSONArray array,array1;
     String incidenciaNombre[],nombre4="";
@@ -348,13 +347,13 @@ public class ListaIncidenciasActivity extends Activity {
                         Nombres_empleados[t] = incidenciasdatos1.getString("Nombre");
                         nombretemporal = incidenciasdatos1.getString("Nombre");
 
-                        prue[t]=SecurityUtils.decryptAES(incidenciasdatos1.getString("Empleado"));
-                        numero=SecurityUtils.decryptAES(incidenciasdatos1.getString("Empleado"));
+                        prue[t]= DecryptUtils.decryptAES(incidenciasdatos1.getString("Empleado"));
+                        numero= DecryptUtils.decryptAES(incidenciasdatos1.getString("Empleado"));
 
 
                         if (t == 0) {
                             arrayList.add(incidenciasdatos1.getString("Nombre"));
-                            numeroDeEmpleados.add(SecurityUtils.decryptAES(incidenciasdatos1.getString("Empleado")));
+                            numeroDeEmpleados.add(DecryptUtils.decryptAES(incidenciasdatos1.getString("Empleado")));
 
 
                         }
@@ -367,7 +366,7 @@ public class ListaIncidenciasActivity extends Activity {
                             {
 
                                 arrayList.add(incidenciasdatos1.getString("Nombre"));
-                                numeroDeEmpleados.add(SecurityUtils.decryptAES(incidenciasdatos1.getString("Empleado")));
+                                numeroDeEmpleados.add(DecryptUtils.decryptAES(incidenciasdatos1.getString("Empleado")));
 
                             }
 
@@ -625,7 +624,7 @@ public class ListaIncidenciasActivity extends Activity {
 
                 JSONObject incidenciasdatos1 = array1.getJSONObject(i);
                 String empleado=incidenciasdatos1.getString("Empleado").replaceAll("[\\p{Cc}\\p{Cf}\\p{Co}\\p{Cn}]","");
-                String nombrever= SecurityUtils.decryptAES(empleado);
+                String nombrever= DecryptUtils.decryptAES(empleado);
 
                 //   int tt=Integer.valueOf(nombrever);
              //   int df= Integer.valueOf(numeroDeEmpleados.get(posicion));
@@ -641,7 +640,7 @@ public class ListaIncidenciasActivity extends Activity {
                     justificarplantilla.add(incidenciasdatos1.getBoolean("Justificada"));
                     CSCplantilla.add(incidenciasdatos1.getInt("CSC"));  // se usa solo para cuando se vaya a justificar//
                     Estatusplantilla.add(incidenciasdatos1.getString("EstatusJustificacion"));
-                    numeroEmpleado.add(SecurityUtils.decryptAES(incidenciasdatos1.getString("Empleado")));
+                    numeroEmpleado.add(DecryptUtils.decryptAES(incidenciasdatos1.getString("Empleado")));
                     cont++;
 
 

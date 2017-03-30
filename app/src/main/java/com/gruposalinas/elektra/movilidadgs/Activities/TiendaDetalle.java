@@ -30,7 +30,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class TiendaDetalle extends Activity
+public class TiendaDetalle extends BaseActivity
 {
     GridView listaTiendas,listaUbicaciones;
     String tiendassss,Zonas;

@@ -35,7 +35,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class DetalleZonaEliminar extends Activity {
+public class DetalleZonaEliminar extends BaseActivity {
     GridView lista;
     Button elminar;
     ArrayAdapter arrayAdapter;

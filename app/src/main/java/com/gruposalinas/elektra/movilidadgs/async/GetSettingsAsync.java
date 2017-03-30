@@ -36,15 +36,12 @@ public class GetSettingsAsync extends AsyncTask<Empleado, Void, Configuracion>{
 	{
 		Log.i(TAG, "onPostExecute" + result.getTiempo());
 
-
 		if(activity!=null){
 			activity.updateSettings(result);
 		}
 		if(horaExacta!=null){
 			horaExacta.getHora(result);
 		}
-
-
         Log.i(TAG, "RESULTS: R=" + result.getRango() + " / D=" + result.getDistancia() + " / T=" + result.getTiempo());
     }
 }

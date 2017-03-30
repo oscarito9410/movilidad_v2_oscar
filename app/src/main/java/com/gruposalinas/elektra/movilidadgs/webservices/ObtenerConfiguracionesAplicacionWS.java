@@ -68,30 +68,6 @@ public class ObtenerConfiguracionesAplicacionWS
         HttpURLConnection urlConnection=null;
 
         try{
-         //   Esta parte sirve para saltar la validacion del certificado//
-            TrustManager[] trustAllCerts = new TrustManager[] {
-                    new X509TrustManager() {
-                        public X509Certificate[] getAcceptedIssuers() {
-                            return new X509Certificate[0];
-                        }
-                        public void checkClientTrusted(X509Certificate[] certs, String authType) {}
-                        public void checkServerTrusted(X509Certificate[] certs, String authType) {}
-                    }};
-
-            // Ignore differences between given hostname and certificate hostname
-            HostnameVerifier hv = new HostnameVerifier() {
-                public boolean verify(String hostname, SSLSession session) { return true; }
-            };
-
-            // Install the all-trusting trust manager
-
-                SSLContext sc = SSLContext.getInstance("SSL");
-                sc.init(null, trustAllCerts, new SecureRandom());
-               HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
-               HttpsURLConnection.setDefaultHostnameVerifier(hv);
-
-
-
 
             ///fin de salta validacion///
             java.net.URL url = new URL(URL);
@@ -144,7 +120,7 @@ public class ObtenerConfiguracionesAplicacionWS
 
                 }
                 else{
-
+                    Utils.checkIfFecha(obj.getString(Constants.SERVER_UTC_TIME));
                     incidencias.setSuccess(false);
                 }
             }
@@ -168,10 +144,6 @@ public class ObtenerConfiguracionesAplicacionWS
             incidencias.setMensajeError(e.toString());
             e.printStackTrace();
             incidencias.setSuccess(false);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (KeyManagementException e) {
-            e.printStackTrace();
         } finally
         {
             if(urlConnection!=null)

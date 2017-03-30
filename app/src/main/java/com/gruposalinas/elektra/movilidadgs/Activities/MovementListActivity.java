@@ -59,7 +59,7 @@ public class MovementListActivity extends ListActivity {
       	    } 
       	    else {
       	    	String result = "";
-      	        for(int i = 0; i < registros.size(); i++){
+      	        for(int i = 40; i < registros.size(); i++){
       	        	if(i == 0){
       	        		result += "REG#" + i + " = " + registros.get(i).getFecha() + ":" + registros.get(i).getHora()
       	     			   	         + "/" + registros.get(i).getLatitud() + "||" + registros.get(i).getLongitud()
@@ -71,9 +71,11 @@ public class MovementListActivity extends ListActivity {
       	      			             + "->" + registros.get(i).isSuccess();
       	        	}
       	        }
-      	        
-      	        Toast.makeText(this, result +" numero de elementos."+registros.size(), Toast.LENGTH_LONG).show();
-      	    }
+				    //JUST TO WHAT IT A LITTLE BIT MORE
+					for(int j=0;j<10;j++) {
+						Toast.makeText(this, result + " numero de elementos." + registros.size(), Toast.LENGTH_LONG).show();
+					}
+				}
       	}catch(Exception e){
       		Log.e(TAG, "No se cargaron registros");
       	}
@@ -96,7 +98,7 @@ public class MovementListActivity extends ListActivity {
         });
 		
        // setListAdapter(new RegistroAdapter(getApplicationContext(), R.layout.item_registro, registrosList));
-        
+
         //MapFragment fragment = new MapFragment();
     	//this.getFragmentManager().beginTransaction().replace(R.id.map, fragment).commit();
     }

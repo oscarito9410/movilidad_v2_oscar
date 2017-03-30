@@ -3,8 +3,10 @@ package com.gruposalinas.elektra.movilidadgs.webservices;
 import android.util.Log;
 
 import com.gruposalinas.elektra.movilidadgs.beans.Permisos;
+import com.gruposalinas.elektra.movilidadgs.utils.ApplicationBase;
 import com.gruposalinas.elektra.movilidadgs.utils.Constants;
 import com.gruposalinas.elektra.movilidadgs.utils.SecurityItems;
+import com.gruposalinas.elektra.movilidadgs.utils.SessionManager;
 import com.gruposalinas.elektra.movilidadgs.utils.Utils;
 
 import org.json.JSONArray;
@@ -43,7 +45,6 @@ public class Permisos_empleadoWS
 
         String URL = Constants.DOMAIN_URL + "/" + Constants.ConsultarExclusionesEmpleados;
         SecurityItems securityItems = new SecurityItems(permisos.getId_numero_empleado());
-
         JSONObject jsonObject= new JSONObject();
         try {
             jsonObject.put("id_num_empleado",securityItems.getIdEmployEncrypt());

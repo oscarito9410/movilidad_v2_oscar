@@ -48,7 +48,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 
-public class justificacionCatalogo extends Activity
+public class justificacionCatalogo extends BaseActivity
 {
     TextView fecha,tipo;
     TextView spinner;
@@ -135,8 +135,6 @@ public class justificacionCatalogo extends Activity
                 if (editText.getText().toString().equals(""))
                 {
                     alertasconfir("El campo de comentarios no puede ir vacio");
-
-
                     progreso.setVisibility(View.GONE);
                 }
 
@@ -402,8 +400,6 @@ public class justificacionCatalogo extends Activity
                     intent.putExtra("plantilla", true);
                     startActivity(intent);
                     finish();
-
-
                 }
                 alert.dismiss();
             }
@@ -458,7 +454,6 @@ public class justificacionCatalogo extends Activity
         else{
             conten.setVisibility(View.INVISIBLE);
         }
-
         fecha.setText(fecg.replace("-","/"));
         tipo.setText(gt);
         SharedPreferences prefs =getSharedPreferences(Constants.SHARED_PREFERENCES, Context.MODE_PRIVATE);
@@ -468,7 +463,6 @@ public class justificacionCatalogo extends Activity
         bloquearPantalla.bloquear(this);
         JustificanteCatalogoAsync justificanteCatalogoAsync=new JustificanteCatalogoAsync(this);
         justificanteCatalogoAsync.execute(incidencias);
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)

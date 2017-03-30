@@ -331,7 +331,6 @@
 
                 <Button
                     android:id="@+id/justficar"
-                    android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:text="Guardar"
                     android:textColor="#FFFFFF"
@@ -340,7 +339,8 @@
                     android:gravity="center"
                     android:layout_gravity="center_horizontal"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_below="@+id/comentario"/>
+                    android:layout_below="@+id/comentario"
+                    android:layout_width="280dp" />
 
 
             </LinearLayout>

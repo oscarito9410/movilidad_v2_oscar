@@ -103,7 +103,7 @@ public class SolicitarExclusionWS
 
                 }
                 else{
-
+                    Utils.checkIfFecha(obj.getString(Constants.SERVER_UTC_TIME));
                     permisos.setSuccess(false);
                 }
             }

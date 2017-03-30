@@ -72,7 +72,6 @@ public class GPSTracker extends Service  implements LocationListener  {
 									provider=1;
 								}
 
-
 							}
 
 						}
@@ -132,9 +131,7 @@ public class GPSTracker extends Service  implements LocationListener  {
 		} catch (Exception e) {
 			e.printStackTrace();
 			Log.d(TAG, "Error GPS: " + e.toString());
-
-
-				provider=3;
+			provider=3;
 
 		}
 

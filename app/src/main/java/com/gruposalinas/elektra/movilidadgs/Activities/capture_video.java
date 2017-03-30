@@ -38,7 +38,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class capture_video extends Activity implements SurfaceHolder.Callback {
+public class capture_video extends BaseActivity implements SurfaceHolder.Callback {
     private static String mFileName = null;
    public static SurfaceHolder holder;
     boolean recording = false;

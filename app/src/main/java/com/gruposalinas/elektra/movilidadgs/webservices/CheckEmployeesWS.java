@@ -5,7 +5,9 @@ import android.util.Log;
 import com.gruposalinas.elektra.movilidadgs.beans.Empleado;
 import com.gruposalinas.elektra.movilidadgs.beans.Singleton;
 import com.gruposalinas.elektra.movilidadgs.utils.Constants;
+import com.gruposalinas.elektra.movilidadgs.utils.ApplicationBase;
 import com.gruposalinas.elektra.movilidadgs.utils.SecurityItems;
+import com.gruposalinas.elektra.movilidadgs.utils.SessionManager;
 import com.gruposalinas.elektra.movilidadgs.utils.Utils;
 
 import org.json.JSONException;
@@ -33,8 +35,9 @@ public class CheckEmployeesWS {
 		employee.setSuccess(false);
 		String url = Constants.DOMAIN_URL + "/" + Constants.CHECK_EMPLOYEE_WS;
 		String numero_empleado=employee.getIdEmployee();
+		SessionManager manager=new SessionManager(ApplicationBase.getAppContext());
+		manager.add(Constants.ID_NUM_EMPLEADO_SETTING,employee.getIdEmployee());
 		SecurityItems securityItems=new SecurityItems(numero_empleado,employee.getRESPUESTA());
-
 		JSONObject jsonObject= new JSONObject();
 		try {
 			jsonObject.put("id_dispositivo", Singleton.getInstance().getImei());

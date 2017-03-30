@@ -41,7 +41,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Settings_perfil extends Activity {
+public class Settings_perfil extends BaseActivity {
 
     private Uri mImageUri;
     obtenerRuta Obtener;

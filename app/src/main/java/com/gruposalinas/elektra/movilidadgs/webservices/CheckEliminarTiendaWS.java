@@ -36,9 +36,7 @@ public class CheckEliminarTiendaWS
     public Tiendas tiendas(Tiendas tiendas)
     {
         tiendas.setSuccess(false);
-
         SecurityItems securityItems=new SecurityItems(tiendas.getId_empleado());
-
         JSONObject jsonObject= new JSONObject();
         JSONObject jsonObject1= new JSONObject();
         JSONArray jsonArray= new JSONArray();

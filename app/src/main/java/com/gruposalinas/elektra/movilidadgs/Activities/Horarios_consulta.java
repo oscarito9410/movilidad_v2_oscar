@@ -48,7 +48,7 @@ import java.util.Date;
 import java.util.StringTokenizer;
 
 
-public class Horarios_consulta extends Activity {
+public class Horarios_consulta extends BaseActivity {
     GridView listView;
     LinearLayout pendiente;
     RelativeLayout progressBar;

@@ -184,12 +184,12 @@
         "source": "C:\\Users\\oemy9\\AndroidStudioProjects\\movilidad-v2\\app\\src\\main\\res\\drawable-xhdpi\\img_ok_no.png"
     },
     {
-        "merged": "C:\\Users\\oemy9\\AndroidStudioProjects\\movilidad-v2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\boton_aseguradoras_x2.png",
-        "source": "C:\\Users\\oemy9\\AndroidStudioProjects\\movilidad-v2\\app\\src\\main\\res\\drawable-xhdpi\\boton_aseguradoras_x2.png"
-    },
-    {
         "merged": "C:\\Users\\oemy9\\AndroidStudioProjects\\movilidad-v2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\perfil_ekt.png",
         "source": "C:\\Users\\oemy9\\AndroidStudioProjects\\movilidad-v2\\app\\src\\main\\res\\drawable-xhdpi\\perfil_ekt.png"
+    },
+    {
+        "merged": "C:\\Users\\oemy9\\AndroidStudioProjects\\movilidad-v2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\boton_aseguradoras_x2.png",
+        "source": "C:\\Users\\oemy9\\AndroidStudioProjects\\movilidad-v2\\app\\src\\main\\res\\drawable-xhdpi\\boton_aseguradoras_x2.png"
     },
     {
         "merged": "C:\\Users\\oemy9\\AndroidStudioProjects\\movilidad-v2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\boton_actualizar_app_x2.png",

@@ -24,7 +24,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Detalle_Horario_pendiente extends Activity {
+public class Detalle_Horario_pendiente extends BaseActivity {
     GridView listView;
     RelativeLayout progressBar;
     JSONArray datos;

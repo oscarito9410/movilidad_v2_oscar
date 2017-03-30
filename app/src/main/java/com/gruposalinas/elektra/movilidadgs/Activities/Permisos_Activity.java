@@ -31,7 +31,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Permisos_Activity extends Activity {
+public class Permisos_Activity extends BaseActivity {
 
     LinearLayout regresar;
     ImageView agregar;

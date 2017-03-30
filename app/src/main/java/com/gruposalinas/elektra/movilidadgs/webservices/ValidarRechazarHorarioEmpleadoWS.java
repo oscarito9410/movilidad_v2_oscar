@@ -38,17 +38,25 @@ public class ValidarRechazarHorarioEmpleadoWS
 
         String URL = Constants.DOMAIN_URL + "/" + Constants.ValidarRechazarHorarioEmpleado;
         SecurityItems securityItems = new SecurityItems(horarios.getNumerodelEmpleado());
+        SecurityItems securityItemsEditar=new SecurityItems(horarios.getId_empleado());
+
+
+
+
+        Log.i(TAG,"ID NUMERO_DEL_EMPLEADO:"+horarios.getNumerodelEmpleado());
+        Log.i(TAG,"ID NUMEROE"+horarios.getNumerodelEmpleado());
+
         JSONObject a= new JSONObject();
-        try {
-            a.put("token",securityItems.getTokenEncrypt());
+        try{
+            //TODO EDITAR AUTORIZAR HORARIO & RECHAZAR HORARIO
+            a.put("token",securityItems.getTokenEncrypt().trim());
             a.put("id_num_empleado",securityItems.getIdEmployEncrypt());
             a.put("validar",horarios.isBit_valido());
             a.put("diasArray",horarios.getTi_dia_semana());
             a.put("horaEntradaArray",horarios.getTm_hora_entrada());
             a.put("horaSalidaArray",horarios.getTm_hora_salida());
             a.put("comentario",horarios.getComentario());
-            a.put("id_num_empleado_logeado",horarios.getId_empleado());
-
+            a.put("id_num_empleado_logeado",securityItemsEditar.getIdEmployEncrypt());
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -103,6 +111,7 @@ public class ValidarRechazarHorarioEmpleadoWS
                    horarios.setSuccess(true);
                 }
                 else{
+                    Utils.checkIfFecha(obj.getString(Constants.SERVER_UTC_TIME));
                     horarios.setSuccess(false);
                     horarios.setMensajeError("error");
                 }
@@ -130,8 +139,6 @@ public class ValidarRechazarHorarioEmpleadoWS
             horarios.setMensajeError(e.toString());
             horarios.setSuccess(false);
         }
-
-
         return  horarios;
     }
 

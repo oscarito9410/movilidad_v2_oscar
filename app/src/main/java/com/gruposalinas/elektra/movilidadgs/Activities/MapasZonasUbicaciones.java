@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -27,7 +28,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-public class MapasZonasUbicaciones extends Activity implements OnMapReadyCallback{
+public class MapasZonasUbicaciones extends BaseActivity implements OnMapReadyCallback{
 
     TextView as,direccion;
     String nom="";
@@ -188,8 +189,20 @@ public class MapasZonasUbicaciones extends Activity implements OnMapReadyCallbac
 
         nom=bundle.getString("nombre");
         as.setText(nom);
-        List<Address> addresses=null;
 
+        try {
+            Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+            List<android.location.Address> addressesList = geocoder.getFromLocation(latitud, longitud, 1);
+            if(addressesList.size()>0){
+               Toast.makeText(this, addressesList.get(0).getAddressLine(0), Toast.LENGTH_LONG).show();
+                direccion.setText(addressesList.get(0).getAddressLine(0));
+            }
+        }
+        catch (IOException ex){
+            ex.printStackTrace();
+        }
+
+        /*
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
 
         try
@@ -200,6 +213,7 @@ public class MapasZonasUbicaciones extends Activity implements OnMapReadyCallbac
 
                 Address fetchedAddress = addresses.get(0);
                 StringBuilder strAddress = new StringBuilder();
+
 
                 for(int i=0; i<fetchedAddress.getMaxAddressLineIndex(); i++) {
                     strAddress.append(fetchedAddress.getAddressLine(i)).append(" ");
@@ -217,7 +231,7 @@ public class MapasZonasUbicaciones extends Activity implements OnMapReadyCallbac
         catch (IOException e)
         {
 
-        }
+        }*/
     }
 
 

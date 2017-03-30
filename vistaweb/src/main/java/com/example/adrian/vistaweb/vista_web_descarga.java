@@ -24,7 +24,6 @@ public class vista_web_descarga extends Activity {
         Bundle bundle=getIntent().getExtras();
         url=bundle.getString("URL");
         version=bundle.getString("version");
-
         alertas();
     }
 

@@ -65,7 +65,6 @@ public class SecurityItems {
         Regresa Fecha en formato listo para encriptar
     * */
     private  String getFormatDate() {
-
         /*
          Calendar cal = Calendar.getInstance();
         int segundos=cal.get(Calendar.SECOND);
@@ -76,10 +75,6 @@ public class SecurityItems {
         dateFormat.format(cal.getTime());
         return dateFormat.format(cal.getTime());*/
 
-        Calendar cal = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmm");
-        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        Log.i(TAG,"KEY UTC/A"+ dateFormat.format(cal.getTime()));
         SimpleDateFormat f = new SimpleDateFormat("yyyyMMddHHmm");
         f.setTimeZone(TimeZone.getTimeZone("UTC"));
         Log.i(TAG,"KEY UTC/N="+f.format(new Date()));
@@ -113,14 +108,6 @@ public class SecurityItems {
         dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         Log.i(TAG, "IV=" + dateFormat.format(cal.getTime()));
         return dateFormat.format(cal.getTime());*/
-
-        Calendar cal = Calendar.getInstance();
-
-         System.currentTimeMillis();
-
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHH");
-        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        Log.i(TAG, "IV CON UTC=" + dateFormat.format(cal.getTime()));
         SimpleDateFormat f = new SimpleDateFormat("yyyyMMddHH");
         f.setTimeZone(TimeZone.getTimeZone("UTC"));
         Log.i(TAG, "IV CON UTC NUEVO="+f.format(new Date()));
